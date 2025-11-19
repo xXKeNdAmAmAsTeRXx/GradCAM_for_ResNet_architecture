@@ -34,11 +34,11 @@ def test_model(model_name: str, model, loader: DataLoader, class_name):
     cf_mtx = confusion_matrix(trues, preds)
 
     fig, ax = plt.subplots(figsize=(16, 16))
-    im = ax.imshow(cf_mtx, interpolation='nearest', cmap='grey')
+    im = ax.imshow(cf_mtx, interpolation='nearest', cmap='viridis')
     cbar = ax.figure.colorbar(im, ax=ax, shrink=0.5)
 
     ax.set(
-        title="Confusion Matrix",
+        title=f"Confusion Matrix for {model_name}",
         ylabel="True label",
         xlabel="Predicted label"
     )
