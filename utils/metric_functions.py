@@ -88,6 +88,6 @@ def test_on_given_idx(dataset, net_model, transform, idx):
 
         Data['True_Label'].append(dataset.classes[label.numpy()[0]])
         Data['Predicted_Label'].append(pred_name)
-        preds.append(pred_name)
+        preds.append(pred)
 
     return preds, pd.DataFrame(Data)
